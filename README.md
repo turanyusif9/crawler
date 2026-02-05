@@ -68,15 +68,6 @@ The update is performed in the function **agent.step()**.
 
 ### Train the Agent
 
-   The environment was solved in the original version
- * in **676 episodes** with **score 500**, see _Crawler_PPO_676epis_500score.ipynb_   
- 
- * in **550 episodes** with **score 650**, see _Crawler_PPO_550epis_650score.ipynb_
- 
- * in **532 episodes** with **score 800**, see _Crawler_PPO_532epis_800score.ipynb_
- 
- * in **678 episodes** with **score 1200**, see _Crawler_PPO_678epis_1200score.ipynb_
-
    To use the original model, `Agent` from `ppo_agent.py` must be imported.
 
    There is also a modified version of the model by our team. Various combinations of the penalties were experimented as noted in the report. 

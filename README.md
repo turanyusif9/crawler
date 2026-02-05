@@ -8,6 +8,7 @@ Original Agent Reward Function :
 * +0.01 times body direction alignment with goal direction.
 
 Modified Agent Reward Function:
+
 Agent reward function is updated using three different penalties based on smoothness, symmetry, and magnitude parameters. These penalties can be turned on and off in `Agent` object in `ppo_agent_combined.py` file.
 
 Observation space size (per agent): 129   

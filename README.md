@@ -3,6 +3,7 @@
 ### Introduction
 
 For this project, we work with the [Crawler](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#crawler) environment. A creature with 4 arms and 4 forearms.   
+
 Original Agent Reward Function :
 * +0.03 times body velocity in the goal direction.
 * +0.01 times body direction alignment with goal direction.
@@ -11,8 +12,6 @@ Modified Agent Reward Function:
 
 Agent reward function is updated using three different penalties based on smoothness, symmetry, and magnitude parameters. These penalties can be turned on and off in `Agent` object in `ppo_agent_combined.py` file.
 
-Observation space size (per agent): 129   
-Action space size (per agent): 20
 
 ![](images/crawler.gif)
 

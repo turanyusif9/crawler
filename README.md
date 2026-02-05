@@ -69,9 +69,11 @@ The update is performed in the function **agent.step()**.
 
 ### Train the Agent
 
+   The jupyter notebook files `Crawler_PPO_....ipynb` are used to train the crawler with specific configurations. To train the model, every cell must be run one by one and specifying the path of `Crawler.exe` file in the environment setup is needed.
+
    To use the original model, `Agent` from `ppo_agent.py` must be imported. 
 
-   To use the updated model that includes penalties, `Agent` from `ppo_agent_combined.py` must be imported.
+   To use the modified model that includes penalties, `Agent` from `ppo_agent_combined.py` must be imported.
 
 
    

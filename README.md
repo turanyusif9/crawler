@@ -68,11 +68,9 @@ The update is performed in the function **agent.step()**.
 
 ### Train the Agent
 
-   To use the original model, `Agent` from `ppo_agent.py` must be imported.
+   To use the original model, `Agent` from `ppo_agent.py` must be imported. 
 
-   There is also a modified version of the model by our team. Various combinations of the penalties were experimented as noted in the report. 
-
-   To use the updated model, `Agent` from `ppo_agent_combined.py` must be imported.
+   To use the updated model that includes penalties, `Agent` from `ppo_agent_combined.py` must be imported.
 
 
    

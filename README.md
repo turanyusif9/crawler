@@ -1,4 +1,4 @@
-## Project 2: Continuous Control (Crawler)   
+## Project: Continuous Control (Crawler)   
 
 ### Introduction
 
@@ -6,6 +6,8 @@ For this project, we work with the [Crawler](https://github.com/Unity-Technologi
 Agent Reward Function (independent):
 * +0.03 times body velocity in the goal direction.
 * +0.01 times body direction alignment with goal direction.
+
+In our model, agent reward function is updated using three different penalties based on smoothness, symmetry, and magnitude parameters. These penalties can be turned on and off in `Agent` object in `ppo_agent_combined.py` file.
 
 Observation space size (per agent): 129   
 Action space size (per agent): 20
@@ -66,7 +68,7 @@ The update is performed in the function **agent.step()**.
 
 ### Train the Agent
 
-   The environment was solved   
+   The environment was solved in the original version
  * in **676 episodes** with **score 500**, see _Crawler_PPO_676epis_500score.ipynb_   
  
  * in **550 episodes** with **score 650**, see _Crawler_PPO_550epis_650score.ipynb_
@@ -75,23 +77,13 @@ The update is performed in the function **agent.step()**.
  
  * in **678 episodes** with **score 1200**, see _Crawler_PPO_678epis_1200score.ipynb_
 
-### Training History
+   To use the original model, `Agent` from `ppo_agent.py` must be imported.
 
- * 1. Input: fc1_units = 1024, fc2_units = 1024, Max Step of Episode = 1000   
-   Result: 676 episodes, score = 500    
-   ![](images/plot_500score.png)    
-   
- * 2. Input: fc1_units = 1024, fc2_units = 1024, Max Step of Episode = 1500    
-   Result: 550 episodes, score = 650       
-   ![](images/plot_650score.png)   
-     
- * 3. Input: fc1_units = 128, fc2_units = 128, Max Step of Episode = 2000   
-   Result: 532 episodes, score = 800     
-   ![](images/plot_800score.png)   
-      
- * 4. InputL fc1_units = 128, fc2_units = 128, Max Step of Episode = 2000       
-    Result: 678 episodes, score = 1200   
-   ![](images/plot_1200score.png)   
+   There is also a modified version of the model by our team. Various combinations of the penalties were experimented as noted in the report. 
+
+   To use the updated model, `Agent` from `ppo_agent_combined.py` must be imported.
+
+
    
 ### Watch the Trained Agent
 
@@ -99,12 +91,8 @@ For both neural networks, the actor and the critic, we save the trained weights 
 with the extension pth.  For all cases, the corresponding files are saved into the directory checkpoints.    
 Using notebook _WatchAgent.ipynb_ we can load the trained weights and replay them.
 
-### Other PPO projects  
-  * [Pong](../Pong-Policy-Gradient-PPO), 8 parallel agents
-  * [CarRacing](../CarRacing-From-Pixels-PPO),  Single agent, Learning from pixels
-  * [BipedalWalker](../BipedalWalker-PPO-VectorizedEnv),   16 parallel agents
 
 ### Credit   
 
-Most of the code is based on Udacity's PPO code.
+Most of the code is based on Udacity's PPO code and the repo by Rafael1s, Rafael Stekolshchik.
    

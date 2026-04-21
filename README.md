@@ -12,6 +12,8 @@ Modified Agent Reward Function:
 
 Agent reward function is updated using three different penalties based on smoothness, symmetry, and magnitude parameters. These penalties can be turned on and off in `Agent` object in `ppo_agent_combined.py` file.
 
+For more info, check `DRL Presentation Group G.pdf` file.
+
 
 ![](images/crawler.gif)
 
